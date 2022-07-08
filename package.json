@@ -1,5 +1,6 @@
 {
   "name": "node-cors-client",
+  "homepage": "https://nicolas-aldao.github.io/front-test",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +8,9 @@
     "start": "next start",
     "build": "next build",
     "export": "npm run build && next export",
-    "prettier": "prettier --write {components,pages}/**/*.js next.config.js"
+    "prettier": "prettier --write {components,pages}/**/*.js next.config.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "engines": {
     "node": "^10.15",
@@ -21,6 +24,7 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^1.17.1"
   }
 }
